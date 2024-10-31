@@ -12,10 +12,35 @@ body {
 a {
     text-decoration: none;
 }
-.hero {
-    position: relative;
+.main {
+    width:100vw;
+    height:100vh;
+    background-color: #1a1d1d;
+    text-align: center;
+}
+.stuff {
+    margin: 0 4vw 0 4vw;
+    background-color: #fc6780;
+}
+.header {
     width: 100%;
-    min-height: 100vh;
+    grid-area: 1/1/2/6;
+    background-color: rgb(246, 21, 100);
+}
+.header div > h1 {
+    font-family: 'Amatic SC', cursive;
+    color:#def5ec;
+    font-size: 7em;
+    letter-spacing: 15px;
+}
+.introduction {
+    padding: 20px;
+    letter-spacing: 2px;
+    font-size: 1.5em;
+}
+video {
+    border-radius: 30px;
+    overflow: hidden;
 }
 nav {
     background-color: #8ab8a6;
@@ -83,12 +108,7 @@ nav ul li a:hover:after {
     border-color: #fd4766;
     color: #fd4766;
 }
-.content {
-    position: absolute;
-    top: 35%;
-    left: 7%;
-    right: 7%;
-}
+
 .right_c {
     width: 40%;
     padding: 0px 15px 50px 35px;
@@ -98,9 +118,9 @@ nav ul li a:hover:after {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.content .title {
+.title {
   color: #0a0a0a;
-  font-size: 20px;
+  font-size: 1.5em;
   text-transform: uppercase;
   letter-spacing: 4px;
   display: inline-block;
