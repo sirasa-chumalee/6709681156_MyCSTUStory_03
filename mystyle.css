@@ -13,23 +13,22 @@ a {
     text-decoration: none;
 }
 .main {
-    width:100vw;
-    height:100vh;
-    background-color: #1a1d1d;
+    height:auto;
     text-align: center;
+    color: white;
 }
 .stuff {
-    margin: 0 4vw 0 4vw;
-    background-color: #fc6780;
+    margin: 0 4% 0 4%;
+    background-color: #1a1d1d;
 }
 .header {
     width: 100%;
     grid-area: 1/1/2/6;
-    background-color: rgb(246, 21, 100);
+    
 }
 .header div > h1 {
     font-family: 'Amatic SC', cursive;
-    color:#def5ec;
+    color:#fd4766;
     font-size: 7em;
     letter-spacing: 15px;
 }
@@ -41,6 +40,13 @@ a {
 video {
     border-radius: 30px;
     overflow: hidden;
+}
+.welcome, .hobbies ,.welcome, .lang, .works, .footer {
+    width: 100%;
+    padding-top: 1vw;
+}
+.welcome h1 {
+    font-family: 'Amatic SC', cursive;
 }
 nav {
     background-color: #8ab8a6;
@@ -80,15 +86,6 @@ nav ul li a:after {
 nav ul li a:hover:after {
     width: 100%;
 }
-
-.column {
-    float:left;
-}
-.row:after {
-    content:"";
-    display: table;
-    clear:both;
-}
 .btn {
     color: #fff;
     font-size: 16px;
@@ -109,15 +106,6 @@ nav ul li a:hover:after {
     color: #fd4766;
 }
 
-.right_c {
-    width: 40%;
-    padding: 0px 15px 50px 35px;
-    border-left-style: solid;
-    border-color: #cbb6b9;
-    background-image: url('./resources/bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 .title {
   color: #0a0a0a;
   font-size: 1.5em;
@@ -162,27 +150,27 @@ nav ul li a:hover:after {
 .cardrow .row, .language {
     margin: 0 -5px;
     display: flex;
-    align-items: center;
     justify-content: center;
     text-align: center;
-}
-@media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;
-    }
 }
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 16px;
     text-align: center;
     background-color: #def5ec;
+    color:#1a1d1d;
 }
-.card img {
+.container .card img {
     border-radius: 9px;
-    height: 250px;
-    width:200px;
+    height: 200px;
+    width:150px;
+} 
+.container > div > h2 {
+    padding-bottom: 1vw;
+}
+.language {
+    display: flex;
+    align-items: center;
 }
 .language label{
     font-size: larger;
@@ -193,10 +181,9 @@ hr {
     margin: 50px;
 }
 footer {
-    position: absolute;
     width: 100%;
     bottom: 0px;
-    height: 70px;
+    height: 10vh;
     background-color: #fc6780;
     color: white;
     justify-content: center;
@@ -280,4 +267,30 @@ div.gallery img {
 }
 .y1 h4 {
     padding: 15px 0 3px 0;
+}
+
+
+/* RESPONSIVE */
+@media only screen and (max-width:800px) {
+    .navbar , .language, .image_gallery {
+        flex-direction: column;
+    }
+    video {
+        width: 250px;
+        height: 140px;
+    }
+    .header div > h1 {
+        font-size: 5em;
+    }
+    .cardrow .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .cardrow .column { 
+        width:70%;
+    }
+    .responsive {
+        padding-top: 10px;
+        width: 100%;
+    }
 }
